@@ -1,16 +1,9 @@
-const toggle = document.getElementById("theme-toggle");
-const body = document.body;
+// Add active class to the current page's link in the navigation
+const navLinks = document.querySelectorAll('nav a');
+const currentUrl = window.location.href;
 
-// Set default theme to dark
-body.classList.add('dark-mode');
-toggle.textContent = "🌞";
-
-toggle.addEventListener("click", () => {
-    if (body.classList.contains('dark-mode')) {
-        body.classList.replace('dark-mode', 'light-mode');
-        toggle.textContent = "🌙";
-    } else {
-        body.classList.replace('light-mode', 'dark-mode');
-        toggle.textContent = "🌞";
+navLinks.forEach(link => {
+    if (link.href === currentUrl) {
+        link.classList.add('active');
     }
 });
