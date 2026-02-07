@@ -28,7 +28,6 @@ body {
     padding: 100px 20px;
 }
 
-/* NAVBAR */
 nav {
     position: fixed;
     top: 0;
@@ -73,7 +72,6 @@ nav a:hover, nav a.active {
 }
 
 
-/* HERO */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -141,7 +139,6 @@ nav a:hover, nav a.active {
 }
 
 
-/* ABOUT, PORTFOLIO, CONTACT PAGES */
 .page-header {
     padding-top: 150px;
     padding-bottom: 50px;
@@ -154,7 +151,6 @@ nav a:hover, nav a.active {
 }
 
 
-/* PROJECTS */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -188,7 +184,6 @@ nav a:hover, nav a.active {
 }
 
 
-/* ===== Creative Contact Upgrade ===== */
 
 .contact-wrapper {
     max-width: 900px;
@@ -201,7 +196,7 @@ nav a:hover, nav a.active {
     overflow: hidden;
 }
 
-/* subtle glow */
+
 .contact-wrapper::before {
     content: "";
     position: absolute;
@@ -226,7 +221,6 @@ nav a:hover, nav a.active {
     opacity: 0.8;
 }
 
-/* links layout */
 #contact .links {
     list-style: none;
     display: flex;
@@ -234,7 +228,6 @@ nav a:hover, nav a.active {
     gap: 18px;
 }
 
-/* each item */
 #contact .links li {
     display: flex;
     align-items: center;
@@ -250,7 +243,6 @@ nav a:hover, nav a.active {
     background: rgba(255,255,255,0.03);
 }
 
-/* icon circle */
 .icon {
     font-size: 1.5rem;
     background: var(--primary-color);
@@ -263,7 +255,6 @@ nav a:hover, nav a.active {
     flex-shrink: 0;
 }
 
-/* text */
 #contact .links li p {
     margin: 0;
     font-weight: 600;
@@ -314,14 +305,13 @@ form button:hover {
     background-color: #67cbf5; 
 }
 
-/* mobile */
+
 @media (max-width: 768px) {
     .contact-wrapper {
         padding: 30px 20px;
     }
 }
 
-/* ABOUT PAGE SPACING */
 .about-section h3 {
     margin-top: 40px;
 }
