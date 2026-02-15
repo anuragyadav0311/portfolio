@@ -62,3 +62,36 @@ body::after {
     width: 100%;
     outline: none;
 }
+
+/* ===== Terminal Responsive ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #terminal {
+        height: calc(100vh - 20px);
+        padding: 8px;
+    }
+
+    #input {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    #terminal {
+        height: calc(100vh - 10px);
+        padding: 5px;
+    }
+
+    #input {
+        font-size: 12px;
+    }
+}
