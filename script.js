@@ -18,6 +18,7 @@ if (menuToggle) {
         menuToggle.classList.toggle('active');
         navUl.classList.toggle('active');
         if (navOverlay) navOverlay.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
     });
 }
 
@@ -27,6 +28,7 @@ navLinks.forEach(link => {
         if (menuToggle) menuToggle.classList.remove('active');
         if (navUl) navUl.classList.remove('active');
         if (navOverlay) navOverlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
     });
 });
 
@@ -36,5 +38,6 @@ if (navOverlay) {
         menuToggle.classList.remove('active');
         navUl.classList.remove('active');
         navOverlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
     });
 }

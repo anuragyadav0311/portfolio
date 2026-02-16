@@ -409,10 +409,14 @@ form button:hover {
         gap: 30px;
         transition: right 0.3s ease;
         z-index: 1050;
+        pointer-events: none;
+        visibility: hidden;
     }
 
     nav ul.active {
         right: 0;
+        pointer-events: auto;
+        visibility: visible;
     }
 
     nav a {
@@ -607,5 +611,9 @@ form button:hover {
 
 .nav-overlay.active {
     display: block;
+}
+
+body.menu-open {
+    overflow: hidden;
 }
 
