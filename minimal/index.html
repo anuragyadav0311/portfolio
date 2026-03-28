@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag Yadav – AI/ML Developer</title>
+    <meta name="description" content="AI/ML Developer & Linux Enthusiast. Building intelligent solutions.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">AY</a>
+            <div class="nav-right">
+                <span class="nav-portfolio-text">Portfolio</span>
+                <button class="cmd-palette-btn" id="cmdPaletteBtn" title="Search (Ctrl+K)">
+                    <i class="ri-search-line"></i>
+                    <span class="cmd-shortcut">Ctrl</span>
+                    <span class="cmd-shortcut">K</span>
+                </button>
+                <a href="https://github.com/anuragyadav0311" target="_blank" class="nav-icon-link" title="GitHub">
+                    <i class="ri-github-fill"></i>
+                </a>
+                <span class="nav-divider"></span>
+                <a href="resume.pdf" target="_blank" class="nav-resume-link">Resume</a>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="ri-sun-line" id="themeIcon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== COMMAND PALETTE ===== -->
+    <div class="cmd-palette-overlay" id="cmdPalette">
+        <div class="cmd-palette-box">
+            <div class="cmd-search-bar">
+                <i class="ri-search-line"></i>
+                <input type="text" id="cmdInput" placeholder="Search for a command to run..." autocomplete="off">
+            </div>
+            <div class="cmd-results" id="cmdResults">
+                <a href="#hero" class="cmd-item" data-keywords="home hero top"><i class="ri-home-4-line"></i> Go to
+                    Home</a>
+                <a href="#about" class="cmd-item" data-keywords="about me bio"><i class="ri-user-line"></i> Go to
+                    About</a>
+                <a href="#experience" class="cmd-item" data-keywords="work experience education"><i
+                        class="ri-briefcase-line"></i> Go to Experience</a>
+                <a href="#skills" class="cmd-item" data-keywords="skills stack technologies"><i
+                        class="ri-stack-line"></i> Go to Stack</a>
+                <a href="#projects" class="cmd-item" data-keywords="projects portfolio work"><i
+                        class="ri-folder-line"></i> Go to Projects</a>
+                <a href="#contact" class="cmd-item" data-keywords="contact email connect"><i class="ri-mail-line"></i>
+                    Go to Contact</a>
+                <a href="resume.pdf" target="_blank" class="cmd-item" data-keywords="resume cv download"><i
+                        class="ri-file-text-line"></i> View Resume</a>
+                <a href="https://github.com/anuragyadav0311" target="_blank" class="cmd-item"
+                    data-keywords="github code"><i class="ri-github-fill"></i> Open GitHub</a>
+                <a href="https://www.linkedin.com/in/anurag-yadav-aa7127325/" target="_blank" class="cmd-item"
+                    data-keywords="linkedin professional"><i class="ri-linkedin-fill"></i> Open LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MOBILE MENU OVERLAY ===== -->
+    <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero">
+            <div class="hero-inner">
+
+                <!-- PIXEL ART LOGO -->
+                <div class="hero-pixel-logo">
+                    <svg viewBox="0 0 120 60" width="240" height="120" class="pixel-svg">
+                        <!-- A -->
+                        <rect x="4" y="50" width="10" height="10" fill="currentColor" />
+                        <rect x="4" y="40" width="10" height="10" fill="currentColor" />
+                        <rect x="4" y="30" width="10" height="10" fill="currentColor" />
+                        <rect x="4" y="20" width="10" height="10" fill="currentColor" />
+                        <rect x="14" y="10" width="10" height="10" fill="currentColor" />
+                        <rect x="24" y="0" width="10" height="10" fill="currentColor" />
+                        <rect x="34" y="10" width="10" height="10" fill="currentColor" />
+                        <rect x="44" y="20" width="10" height="10" fill="currentColor" />
+                        <rect x="44" y="30" width="10" height="10" fill="currentColor" />
+                        <rect x="44" y="40" width="10" height="10" fill="currentColor" />
+                        <rect x="44" y="50" width="10" height="10" fill="currentColor" />
+                        <rect x="14" y="30" width="10" height="10" fill="currentColor" />
+                        <rect x="24" y="30" width="10" height="10" fill="currentColor" />
+                        <rect x="34" y="30" width="10" height="10" fill="currentColor" />
+                        <!-- Y -->
+                        <rect x="60" y="0" width="10" height="10" fill="currentColor" />
+                        <rect x="60" y="10" width="10" height="10" fill="currentColor" />
+                        <rect x="70" y="20" width="10" height="10" fill="currentColor" />
+                        <rect x="80" y="30" width="10" height="10" fill="currentColor" />
+                        <rect x="80" y="40" width="10" height="10" fill="currentColor" />
+                        <rect x="80" y="50" width="10" height="10" fill="currentColor" />
+                        <rect x="90" y="20" width="10" height="10" fill="currentColor" />
+                        <rect x="100" y="0" width="10" height="10" fill="currentColor" />
+                        <rect x="100" y="10" width="10" height="10" fill="currentColor" />
+                    </svg>
+                </div>
+
+                <!-- PROFILE CARD -->
+                <div class="hero-card">
+                    <div class="hero-card-top">
+                        <div class="hero-avatar-container">
+                            <img src="profile.jpg" alt="Anurag Yadav" class="hero-avatar">
+                            <span class="hero-flag">🇮🇳</span>
+                        </div>
+                        <div class="hero-identity">
+                            <span class="hero-class-hint">text-3xl text-zinc-950 font-medium</span>
+                            <h1 class="hero-name">Anurag Yadav <span class="verified-badge"><i
+                                        class="ri-verified-badge-fill"></i></span></h1>
+                            <p class="hero-subtitle">aspiring aiml dev</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OVERVIEW SECTION -->
+                <div class="hero-overview">
+                    <div class="overview-grid">
+                        <div class="overview-item">
+                            <i class="ri-code-s-slash-line"></i>
+                            <span>B.Tech Student <a href="https://vit.ac.in" target="_blank">@VIT Bhopal</a></span>
+                        </div>
+                        <div class="overview-item">
+                            <i class="ri-time-line"></i>
+                            <span id="liveTime">00:00</span>
+                            <span class="time-hint">// same time</span>
+                        </div>
+                        <div class="overview-item">
+                            <i class="ri-map-pin-2-line"></i>
+                            <span>Bhilai, India</span>
+                        </div>
+                        <div class="overview-item">
+                            <i class="ri-mail-line"></i>
+                            <span>anuragyadav47844@gmail.com</span>
+                        </div>
+                        <div class="overview-item">
+                            <i class="ri-phone-line"></i>
+                            <span>+918109610356</span>
+                        </div>
+                        <div class="overview-item">
+                            <i class="ri-global-line"></i>
+                            <span>anuragyadav0311.github.io</span>
+                        </div>
+                        <div class="overview-item">
+                            <i class="ri-user-line"></i>
+                            <span>he/him</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOCIAL LINKS 2×2 GRID -->
+                <div class="hero-socials-grid">
+                    <a href="https://github.com/anuragyadav0311" target="_blank" class="social-card">
+                        <div class="social-card-icon github-icon">
+                            <i class="ri-github-fill"></i>
+                        </div>
+                        <div class="social-card-info">
+                            <span class="social-card-name">GitHub</span>
+                            <span class="social-card-handle">anuragyadav0311</span>
+                        </div>
+                        <i class="ri-arrow-right-up-line social-card-arrow"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/anurag-yadav-aa7127325/" target="_blank" class="social-card">
+                        <div class="social-card-icon linkedin-icon">
+                            <i class="ri-linkedin-fill"></i>
+                        </div>
+                        <div class="social-card-info">
+                            <span class="social-card-name">LinkedIn</span>
+                            <span class="social-card-handle">anuragyadav</span>
+                        </div>
+                        <i class="ri-arrow-right-up-line social-card-arrow"></i>
+                    </a>
+                    <a href="https://codolio.com/profile/anuragyadav0311" target="_blank" class="social-card">
+                        <div class="social-card-icon codolio-icon">
+                            <i class="ri-bookmark-line"></i>
+                        </div>
+                        <div class="social-card-info">
+                            <span class="social-card-name">Codolio</span>
+                            <span class="social-card-handle">anuragyadav0311</span>
+                        </div>
+                        <i class="ri-arrow-right-up-line social-card-arrow"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/anurag_yadav_0311/" target="_blank" class="social-card">
+                        <div class="social-card-icon leetcode-icon">
+                            <i class="ri-code-box-line"></i>
+                        </div>
+                        <div class="social-card-info">
+                            <span class="social-card-name">LeetCode</span>
+                            <span class="social-card-handle">anurag_yadav_0311</span>
+                        </div>
+                        <i class="ri-arrow-right-up-line social-card-arrow"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="section" id="about">
+            <div class="section-container">
+                <h2 class="section-title">About</h2>
+                <div class="about-content">
+                    <ul class="about-list">
+                        <li>Dedicated AI/ML Developer and Linux Enthusiast currently pursuing B.Tech at VIT Bhopal
+                            University.</li>
+                        <li>Skilled in C++, Python, Java, HTML, and experienced with Linux systems (Arch, Ubuntu,
+                            Omarchy).</li>
+                        <li>Passionate about bridging the gap between high-level application development and low-level
+                            system optimization.</li>
+                        <li>Creator of <a href="https://github.com/anuragyadav0311/CatXForest"
+                                target="_blank">CatXForest</a>: AI-powered student career recommendation system.</li>
+                        <li>Built <a href="https://github.com/anuragyadav0311/OmarchyMadeEasy"
+                                target="_blank">Vaxtrust</a>: Vaccine Transparency and Safety Verification Platform.</li>
+                        <li>Actively preparing for GATE while exploring Data Science, Machine Learning and deep
+                            algorithmic problem solving.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section class="section" id="experience">
+            <div class="section-container">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-header">
+                            <div class="timeline-info">
+                                <h3 class="timeline-company">VIT Bhopal University</h3>
+                                <p class="timeline-role">B.Tech in Computer Science (AI & ML Specialization)</p>
+                            </div>
+                            <span class="timeline-date">2024 – 2028</span>
+                        </div>
+                        <div class="timeline-details">
+                            <div class="timeline-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">C++</span>
+                                <span class="tag">Java</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">DSA</span>
+                                <span class="tag">Computer Vision</span>
+                                <span class="tag">NLP</span>
+                            </div>
+                            <p class="timeline-desc">Currently a Second Year Student pursuing B.Tech. CGPA: 8.33/10.
+                                Focus areas: Machine Learning, Deep Learning, AI applications, and software development.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-header">
+                            <div class="timeline-info">
+                                <h3 class="timeline-company">Delhi Public School Risali, Bhilai</h3>
+                                <p class="timeline-role">Primary & Secondary Education</p>
+                            </div>
+                            <span class="timeline-date">2010 – 2024</span>
+                        </div>
+                        <div class="timeline-details">
+                            <div class="timeline-tags">
+                                <span class="tag">Mathematics</span>
+                                <span class="tag">Physics</span>
+                                <span class="tag">Chemistry</span>
+                                <span class="tag">Computer Science</span>
+                            </div>
+                            <p class="timeline-desc">Completed primary and secondary schooling, fostering a strong
+                                foundation in science and mathematics that led to passion for engineering.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="section" id="skills">
+            <div class="section-container">
+                <h2 class="section-title">Stack</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="skill-cat-title"><i class="ri-code-line"></i> Languages</h3>
+                        <div class="skill-items">
+                            <div class="skill-item"><span>C++</span></div>
+                            <div class="skill-item"><span>Python</span></div>
+                            <div class="skill-item"><span>Java</span></div>
+                            <div class="skill-item"><span>HTML</span></div>
+                            <div class="skill-item"><span>CSS</span></div>
+                            <div class="skill-item"><span>JavaScript</span></div>
+                            <div class="skill-item"><span>SQL</span></div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-cat-title"><i class="ri-brain-line"></i> AI / ML</h3>
+                        <div class="skill-items">
+                            <div class="skill-item"><span>Machine Learning</span></div>
+                            <div class="skill-item"><span>Deep Learning</span></div>
+                            <div class="skill-item"><span>Computer Vision</span></div>
+                            <div class="skill-item"><span>NLP</span></div>
+                            <div class="skill-item"><span>Data Science</span></div>
+                            <div class="skill-item"><span>Scikit-learn</span></div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-cat-title"><i class="ri-terminal-box-line"></i> Tools & Systems</h3>
+                        <div class="skill-items">
+                            <div class="skill-item"><span>Linux</span></div>
+                            <div class="skill-item"><span>Arch Linux</span></div>
+                            <div class="skill-item"><span>Ubuntu</span></div>
+                            <div class="skill-item"><span>Git & GitHub</span></div>
+                            <div class="skill-item"><span>Tkinter</span></div>
+                            <div class="skill-item"><span>VS Code</span></div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-cat-title"><i class="ri-lightbulb-line"></i> Concepts</h3>
+                        <div class="skill-items">
+                            <div class="skill-item"><span>DSA</span></div>
+                            <div class="skill-item"><span>Algorithms</span></div>
+                            <div class="skill-item"><span>OOP</span></div>
+                            <div class="skill-item"><span>System Optimization</span></div>
+                            <div class="skill-item"><span>Competitive Programming</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section class="section" id="projects">
+            <div class="section-container">
+                <h2 class="section-title">Projects <span class="section-count">(6)</span></h2>
+                <div class="projects-grid" id="projectsGrid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="ri-robot-2-line"></i></div>
+                            <a href="https://github.com/anuragyadav0311/CatXForest" target="_blank"
+                                class="project-link-icon" title="Open Project"><i
+                                    class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                        <h3 class="project-name">CatXForest</h3>
+                        <p class="project-desc">AI-powered student career recommendation system using a hybrid ensemble
+                            model (Random Forest, XGBoost, CatBoost) with Flask. Predicts ideal career paths based on
+                            academic scores and personal attributes.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">XGBoost</span>
+                            <span class="tag">CatBoost</span>
+                            <span class="tag">Random Forest</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="ri-shield-check-line"></i></div>
+                            <a href="https://github.com/anuragyadav0311/Vaxtrust" target="_blank"
+                                class="project-link-icon" title="Open Project"><i
+                                    class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                        <h3 class="project-name">VaxTrust</h3>
+                        <p class="project-desc">AI-powered vaccine verification platform. Scan QR codes for real-time
+                            Trust Scores, utilizing anomaly detection machine learning on adverse event data to ensure
+                            vaccine safety.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">React Native</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="ri-book-open-line"></i></div>
+                            <a href="https://github.com/anuragyadav0311/Library-Management-System" target="_blank"
+                                class="project-link-icon" title="Open Project"><i
+                                    class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                        <h3 class="project-name">Library Management System</h3>
+                        <p class="project-desc">Console-based C++ library management with file persistence, book
+                            issuing/returning, fine calculation, and student/book management using linked lists.</p>
+                        <div class="project-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">OOP</span>
+                            <span class="tag">Linked Lists</span>
+                            <span class="tag">File I/O</span>
+                        </div>
+                    </div>
+                    <div class="project-card hidden-project">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="ri-folder-transfer-line"></i></div>
+                            <a href="https://github.com/anuragyadav0311/linux-dlsorter" target="_blank"
+                                class="project-link-icon" title="Open Project"><i
+                                    class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                        <h3 class="project-name">DLSorter</h3>
+                        <p class="project-desc">Background script that automatically organizes Linux downloads, sorting
+                            code and media into designated folders the exact moment they finish downloading.</p>
+                        <div class="project-tags">
+                            <span class="tag">Bash</span>
+                            <span class="tag">Linux</span>
+                            <span class="tag">inotify</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                    <div class="project-card hidden-project">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="ri-terminal-box-fill"></i></div>
+                            <a href="https://github.com/anuragyadav0311/cpp-auto-installer" target="_blank"
+                                class="project-link-icon" title="Open Project"><i
+                                    class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                        <h3 class="project-name">C++ Auto Installer</h3>
+                        <p class="project-desc">One-click, cross-platform C/C++ compiler installer for Windows, Linux,
+                            and macOS. Automatically installs GCC/MinGW and configures the environment.</p>
+                        <div class="project-tags">
+                            <span class="tag">Shell</span>
+                            <span class="tag">Batch</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Cross-platform</span>
+                        </div>
+                    </div>
+                    <div class="project-card hidden-project">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="ri-book-2-line"></i></div>
+                            <a href="https://github.com/anuragyadav0311/SmartStudyTracker" target="_blank"
+                                class="project-link-icon" title="Open Project"><i
+                                    class="ri-arrow-right-up-line"></i></a>
+                        </div>
+                        <h3 class="project-name">Smart Study Tracker</h3>
+                        <p class="project-desc">Java-based command-line application that helps students track daily
+                            study sessions (subject, duration, date) with local file-based persistence and OOP
+                            principles.</p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">OOP</span>
+                            <span class="tag">File Handling</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="show-more-btn" id="showMoreBtn">
+                    <span id="showMoreText">Show More</span>
+                    <i class="ri-arrow-down-s-line" id="showMoreIcon"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- INTERESTS SECTION -->
+        <section class="section" id="interests">
+            <div class="section-container">
+                <h2 class="section-title">Interests & Goals</h2>
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <div class="interest-icon"><i class="ri-brain-line"></i></div>
+                        <h3>AI/ML Aspirant</h3>
+                        <p>Actively expanding expertise into Data Science and Machine Learning, focusing on data-driven
+                            models to solve real-world problems.</p>
+                    </div>
+                    <div class="interest-card">
+                        <div class="interest-icon"><i class="ri-book-2-line"></i></div>
+                        <h3>GATE Preparation</h3>
+                        <p>Currently preparing for the GATE exam to achieve mastery of core principles of Computer
+                            Science and Engineering.</p>
+                    </div>
+                    <div class="interest-card">
+                        <div class="interest-icon"><i class="ri-open-source-line"></i></div>
+                        <h3>Open Source & Linux</h3>
+                        <p>Deep love for the Arch and Ubuntu ecosystems. Enjoys fine-tuning development environments and
+                            contributing to open-source.</p>
+                    </div>
+                    <div class="interest-card">
+                        <div class="interest-icon"><i class="ri-code-box-line"></i></div>
+                        <h3>Competitive Programming</h3>
+                        <p>Regularly sharpening technical edge by tackling algorithmic challenges on LeetCode and
+                            Codeforces.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section" id="contact">
+            <div class="section-container">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="contact-subtitle">Have an idea, opportunity, or challenge? I'd love to hear from you.</p>
+                <div class="contact-grid">
+                    <a href="mailto:anuragyadav47844@gmail.com" class="contact-card">
+                        <div class="contact-icon"><i class="ri-mail-line"></i></div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>anuragyadav47844@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/anurag-yadav-aa7127325/" target="_blank" class="contact-card">
+                        <div class="contact-icon"><i class="ri-linkedin-fill"></i></div>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>Connect Professionally</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/anuragyadav0311" target="_blank" class="contact-card">
+                        <div class="contact-icon"><i class="ri-github-fill"></i></div>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p>See my projects</p>
+                        </div>
+                    </a>
+                    <a href="https://codeforces.com/profile/anuragyadav0311" target="_blank" class="contact-card">
+                        <div class="contact-icon"><i class="ri-trophy-line"></i></div>
+                        <div>
+                            <h3>Codeforces</h3>
+                            <p>Competitive profile</p>
+                        </div>
+                    </a>
+                    <a href="https://leetcode.com/u/anurag_yadav_0311/" target="_blank" class="contact-card">
+                        <div class="contact-icon"><i class="ri-code-s-slash-line"></i></div>
+                        <div>
+                            <h3>LeetCode</h3>
+                            <p>Problem solving</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h3>Send a Message</h3>
+                    <form action="https://formsubmit.co/anuragyadav47844@gmail.com" method="POST" class="contact-form">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit"><i class="ri-send-plane-fill"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-quote">"The only way to do great work is to love what you do." — Steve Jobs</p>
+            <p class="footer-credit">Built by <a href="https://www.linkedin.com/in/anurag-yadav-aa7127325/"
+                    target="_blank">anuragyadav</a></p>
+            <div class="footer-links">
+                <a href="https://github.com/anuragyadav0311" target="_blank"><i class="ri-github-fill"></i></a>
+                <a href="https://www.linkedin.com/in/anurag-yadav-aa7127325/" target="_blank"><i
+                        class="ri-linkedin-fill"></i></a>
+                <a href="https://leetcode.com/u/anurag_yadav_0311/" target="_blank"><i
+                        class="ri-code-s-slash-line"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top-btn" id="scrollTopBtn" title="Back to top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
