@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anurag Yadav — AY Desktop Portfolio</title>
+    <meta
+      name="description"
+      content="Anurag Yadav portfolio as a classic desktop interface with app-like windows for about, projects, skills, terminal, contact, wallpaper customization, and games."
+    />
+    <meta name="author" content="Anurag Yadav" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="no-js boot-active wallpaper-classic">
+    <div class="boot-screen" id="bootScreen" aria-live="polite">
+      <div class="boot-box">
+        <p class="boot-heading">Microsoft AY-DOS 95</p>
+        <p class="boot-sub">Starting Anurag Personal Desktop...</p>
+        <div id="bootLines" class="boot-lines" role="log" aria-label="Boot sequence"></div>
+      </div>
+    </div>
+
+    <div class="desktop" id="desktop" role="application" aria-label="Anurag desktop">
+      <aside class="desktop-icons" aria-label="Desktop icons">
+        <button class="desktop-icon" data-open="app-about" type="button"><span class="icon-glyph">😎</span><span>About Me</span></button>
+        <button class="desktop-icon" data-open="app-education" type="button"><span class="icon-glyph">🎓</span><span>Edu Quest</span></button>
+        <button class="desktop-icon" data-open="app-skills" type="button"><span class="icon-glyph">🧠</span><span>Skill Matrix</span></button>
+        <button class="desktop-icon" data-open="app-projects" type="button"><span class="icon-glyph">🚀</span><span>Launch Pad</span></button>
+        <button class="desktop-icon" data-open="app-backend" type="button"><span class="icon-glyph">⚙️</span><span>Backend Lab</span></button>
+        <button class="desktop-icon" data-open="app-terminal" type="button"><span class="icon-glyph">💻</span><span>Nerd Console</span></button>
+        <button class="desktop-icon" data-open="app-contact" type="button"><span class="icon-glyph">📡</span><span>Signal Hub</span></button>
+        <button class="desktop-icon" data-open="app-wallpaper" type="button"><span class="icon-glyph">🖼️</span><span>Wallpapers</span></button>
+        <button class="desktop-icon" data-open="app-gallery" type="button"><span class="icon-glyph">📷</span><span>Gallery</span></button>
+        <button class="desktop-icon" data-open="app-snake" type="button"><span class="icon-glyph">🐍</span><span>Snake</span></button>
+        <button class="desktop-icon" data-open="app-tetris" type="button"><span class="icon-glyph">🧱</span><span>Tetris</span></button>
+      </aside>
+
+      <section class="window-layer" id="windowLayer" aria-label="Desktop windows">
+        <article class="window app-window" id="app-about" data-app="about" style="left: 170px; top: 34px; width: 560px;">
+          <header class="title-bar" data-drag-handle>
+            <p>About Me.exe</p>
+            <div class="title-actions"><button class="title-btn" data-minimize="app-about" type="button">_</button><button class="title-btn" data-close="app-about" type="button">X</button></div>
+          </header>
+          <div class="window-content">
+            <h1>Anurag Yadav (Anu)</h1>
+            <p>I am a second-year Computer Science student at VIT Bhopal University with a strong academic foundation from Delhi Public School, Risali, Bhilai (2010–2024).</p>
+            <p>My direction is depth-first: AI/ML, algorithms, systems, mathematical rigor, and practical software development. I am actively preparing for GATE to master core CS fundamentals.</p>
+            <ul>
+              <li>Aspiring AI/ML developer expanding into Data Science and Machine Learning</li>
+              <li>Competitive programming practitioner (Codeforces + LeetCode)</li>
+              <li>Linux-first workflow with Ubuntu (Wayland) and Arch customization</li>
+              <li>Primary machine: Asus TUF Gaming A15</li>
+            </ul>
+            <a class="flat-btn resume-btn" href="https://anurag-yadav.in/resume.pdf" target="_blank" rel="noopener noreferrer" download>Download Resume</a>
+          </div>
+        </article>
+
+        <article class="window app-window" id="app-education" data-app="education" style="left: 190px; top: 78px; width: 480px; display:none;">
+          <header class="title-bar" data-drag-handle>
+            <p>Education.log</p>
+            <div class="title-actions"><button class="title-btn" data-minimize="app-education" type="button">_</button><button class="title-btn" data-close="app-education" type="button">X</button></div>
+          </header>
+          <div class="window-content">
+            <h2>Academic Timeline</h2>
+            <div class="row-block"><strong>2024 – 2028</strong><p>B.Tech CSE, VIT Bhopal University</p><small>AI/ML growth, backend development, and GATE preparation</small></div>
+            <div class="row-block"><strong>2010 – 2024</strong><p>Delhi Public School, Risali, Bhilai</p><small>Science-focused school education and strong fundamentals</small></div>
+            <h3>Current Study Interests</h3>
+            <p>Fourier Transform, Automata Theory, derivation trees, NFA, regular expressions, and algorithmic problem-solving.</p>
+          </div>
+        </article>
+
+        <article class="window app-window" id="app-skills" data-app="skills" style="left: 215px; top: 52px; width: 520px; display:none;">
+          <header class="title-bar" data-drag-handle>
+            <p>Skills.cfg</p>
+            <div class="title-actions"><button class="title-btn" data-minimize="app-skills" type="button">_</button><button class="title-btn" data-close="app-skills" type="button">X</button></div>
+          </header>
+          <div class="window-content">
+            <h2>Technical Profile</h2>
+            <div class="info-grid">
+              <div><strong>Languages</strong><span>Python, C++, Java, HTML</span></div>
+              <div><strong>OS</strong><span>Ubuntu (Wayland), Arch Linux</span></div>
+              <div><strong>Concepts</strong><span>DSA, ML, Automata, System Basics</span></div>
+              <div><strong>Tooling</strong><span>Git, GitHub, terminal-first workflows</span></div>
+            </div>
+            <h3>Working Style</h3>
+            <p>High personal standards, deep work mindset, and preference for clarity over superficial complexity.</p>
+          </div>
+        </article>
+
+        <article class="window app-window" id="app-projects" data-app="projects" style="left: 200px; top: 62px; width: 650px; display:none;">
+          <header class="title-bar" data-drag-handle>
+            <p>Projects Explorer</p>
+            <div class="title-actions"><button class="title-btn" data-minimize="app-projects" type="button">_</button><button class="title-btn" data-close="app-projects" type="button">X</button></div>
+          </header>
+          <div class="window-content">
+            <h2>Highlighted Work</h2>
+            <div class="projects-grid">
+              <div class="card"><h3>cpp-auto-installer</h3><p>Cross-platform C/C++ compiler installer for Windows, Linux, and macOS.</p><a href="https://github.com/anuragyadav0311/cpp-auto-installer" target="_blank" rel="noopener noreferrer">Open GitHub</a></div>
+              <div class="card"><h3>CatXForest</h3><p>Career recommendation engine blending random-forest concepts with practical guidance.</p><a href="https://github.com/anuragyadav0311/CatXForest" target="_blank" rel="noopener noreferrer">Open GitHub</a></div>
+              <div class="card"><h3>Portfolio with Terminal UI</h3><p>Personal website with interactive terminal chatbot concept and retro UX direction.</p><a href="https://anurag-yadav.in" target="_blank" rel="noopener noreferrer">Visit Live</a></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="window app-window" id="app-backend" data-app="backend" style="left: 250px; top: 108px; width: 500px; display:none;">
+          <header class="title-bar" data-drag-handle>
+            <p>Backend Lab.py</p>
+            <div class="title-actions"><button class="title-btn" data-minimize="app-backend" type="button">_</button><button class="title-btn" data-close="app-backend" type="button">X</button></div>
+          </header>
+          <div class="window-content">
+            <h2>Backend Direction</h2>
+            <p>I am actively building backend projects with Python-first components (like <code>app.py</code>) and structured API logic.</p>
+            <ul>
+              <li>Clean request/response flows and modular architecture</li>
+              <li>Simple and maintainable service design</li>
+              <li>Bridge between theoretical CS and production-ready behavior</li>
+              <li>Future path: AI-assisted backend workflows</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="window app-window" id="app-terminal" data-app="terminal" style="left: 180px; top: 132px; width: 600px; display:none;">
+          <header class="title-bar" data-drag-handle>
+            <p>AY Terminal</p>
+            <div class="title-actions"><button class="title-btn" data-minimize="app-terminal" type="button">_</button><button class="title-btn" data-close="app-terminal" type="button">X</button></div>
+          </header>
+          <div class="window-content terminal-content">
+            <p class="hint">Type <code>help</code> to list commands. Try: <code>ls</code>, <code>pwd</code>, <code>whoami</code>, <code>date</code>, <code>open gallery</code>, <code>clear</code></p>
+            <ul class="console-feed" id="consoleFeed" aria-live="polite"></ul>
+            <form class="terminal-form" id="terminalForm" autocomplete="off">
+              <label class="sr-only" for="terminalInput">Terminal command</label>
+              <span class="prompt-prefix">anu@ay-os:~$</span>
+              <input id="terminalInput" type="text" placeholder="type command" aria-label="terminal input" />
+              <button class="flat-btn" type="submit">Run</button>
+            </form>
+          </div>
+        </article>
+
+        <article class="window app-window" id="app-contact" data-app="contact" style="left: 305px; top: 64px; width: 420px; display:none;">
+          <header class="title-bar" data-drag-handle>
+            <p>Contact Book</p>
+            <div class="title-actions"><button class="title-btn" data-minimize="app-contact" type="button">_</button><button class="title-btn" data-close="app-contact" type="button">X</button></div>
+          </header>
+          <div class="window-content">
+            <h2>Reach Me</h2>
+            <div class="contact-list">
+              <p><strong>Email:</strong> <a href="mailto:anuragyadav47844@gmail.com">anuragyadav47844@gmail.com</a></p>
+              <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/anurag-yadav-aa7127325/" target="_blank" rel="noopener noreferrer">@anurag-yadav</a></p>
+              <p><strong>GitHub:</strong> <a href="https://github.com/anuragyadav0311" target="_blank" rel="noopener noreferrer">anuragyadav0311</a></p>
+              <p><strong>Codeforces:</strong> <a href="https://codeforces.com/profile/anuragyadav0311" target="_blank" rel="noopener noreferrer">anuragyadav0311</a></p>
+              <p><strong>LeetCode:</strong> <a href="https://leetcode.com/u/anurag_yadav_0311/" target="_blank" rel="noopener noreferrer">anurag_yadav_0311</a></p>
+            </div>
+            <button class="flat-btn" id="openContactPopup" type="button">Send Message</button>
+          </div>
+        </article>
+
+        <article class="window app-window" id="app-wallpaper" data-app="wallpaper" style="left: 360px; top: 120px; width: 360px; display:none;">
+          <header class="title-bar" data-drag-handle>
+            <p>Wallpaper Picker</p>
+            <div class="title-actions"><button class="title-btn" data-minimize="app-wallpaper" type="button">_</button><button class="title-btn" data-close="app-wallpaper" type="button">X</button></div>
+          </header>
+          <div class="window-content">
+            <h2>Desktop Themes</h2>
+            <p>Select a wallpaper style:</p>
+            <div class="wallpaper-options" id="wallpaperOptions">
+              <button class="flat-btn wallpaper-btn" type="button" data-wallpaper="classic">Classic Teal</button>
+              <button class="flat-btn wallpaper-btn" type="button" data-wallpaper="sunset">Sunset Grid</button>
+              <button class="flat-btn wallpaper-btn" type="button" data-wallpaper="matrix">Matrix Rain</button>
+              <button class="flat-btn wallpaper-btn" type="button" data-wallpaper="galaxy">Galaxy Night</button>
+            </div>
+          </div>
+        </article>
+
+
+        <article class="window app-window" id="app-gallery" data-app="gallery" style="left: 270px; top: 70px; width: 700px; display:none;">
+          <header class="title-bar" data-drag-handle>
+            <p>Photo Gallery</p>
+            <div class="title-actions"><button class="title-btn" data-minimize="app-gallery" type="button">_</button><button class="title-btn" data-close="app-gallery" type="button">X</button></div>
+          </header>
+          <div class="window-content">
+            <h2>Photos Folder</h2>
+            <p>Loaded from <code>Portfolio/photos</code></p>
+            <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+          </div>
+        </article>
+
+        <article class="window app-window" id="app-snake" data-app="snake" style="left: 380px; top: 40px; width: 360px; display:none;">
+          <header class="title-bar" data-drag-handle>
+            <p>Snake.exe</p>
+            <div class="title-actions"><button class="title-btn" data-minimize="app-snake" type="button">_</button><button class="title-btn" data-close="app-snake" type="button">X</button></div>
+          </header>
+          <div class="window-content game-content">
+            <p class="hint">Arrow keys / WASD. Eat food, avoid walls and yourself.</p>
+            <canvas id="snakeCanvas" width="240" height="240" class="game-canvas" aria-label="Snake game canvas"></canvas>
+            <div class="game-panel">
+              <span id="snakeScore">Score: 0</span>
+              <button class="flat-btn" id="snakeStart" type="button">Start</button>
+              <button class="flat-btn" id="snakeReset" type="button">Reset</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="window app-window" id="app-tetris" data-app="tetris" style="left: 410px; top: 80px; width: 360px; display:none;">
+          <header class="title-bar" data-drag-handle>
+            <p>Tetris.exe</p>
+            <div class="title-actions"><button class="title-btn" data-minimize="app-tetris" type="button">_</button><button class="title-btn" data-close="app-tetris" type="button">X</button></div>
+          </header>
+          <div class="window-content game-content">
+            <p class="hint">← → move, ↑ rotate, ↓ drop, Space hard drop.</p>
+            <canvas id="tetrisCanvas" width="200" height="320" class="game-canvas" aria-label="Tetris game canvas"></canvas>
+            <div class="game-panel">
+              <span id="tetrisScore">Score: 0</span>
+              <button class="flat-btn" id="tetrisStart" type="button">Start</button>
+              <button class="flat-btn" id="tetrisPause" type="button">Pause</button>
+              <button class="flat-btn" id="tetrisReset" type="button">Reset</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <div class="start-menu" id="startMenu" aria-hidden="true">
+        <button type="button" data-open="app-about">About Me</button>
+        <button type="button" data-open="app-projects">Projects Explorer</button>
+        <button type="button" data-open="app-terminal">Terminal</button>
+        <button type="button" data-open="app-wallpaper">Wallpaper Picker</button>
+        <button type="button" data-open="app-gallery">Photo Gallery</button>
+        <button type="button" data-open="app-snake">Snake</button>
+        <button type="button" data-open="app-tetris">Tetris</button>
+        <button type="button" data-open="app-contact">Contact Book</button>
+      </div>
+
+      <footer class="taskbar">
+        <button class="start-btn" id="startButton" type="button">Start</button>
+        <div class="task-buttons" id="taskButtons">
+          <button type="button" data-task="app-about">About</button>
+          <button type="button" data-task="app-education">Education</button>
+          <button type="button" data-task="app-skills">Skills</button>
+          <button type="button" data-task="app-projects">Projects</button>
+          <button type="button" data-task="app-backend">Backend</button>
+          <button type="button" data-task="app-terminal">Terminal</button>
+          <button type="button" data-task="app-wallpaper">Wallpapers</button>
+          <button type="button" data-task="app-gallery">Gallery</button>
+          <button type="button" data-task="app-snake">Snake</button>
+          <button type="button" data-task="app-tetris">Tetris</button>
+          <button type="button" data-task="app-contact">Contact</button>
+        </div>
+        <div class="task-clock" id="statusClock" aria-live="polite">--</div>
+      </footer>
+    </div>
+
+
+    <div class="lightbox" id="galleryLightbox" aria-hidden="true">
+      <div class="lightbox-inner">
+        <button class="title-btn lightbox-close" id="lightboxClose" type="button" aria-label="Close preview">X</button>
+        <img id="lightboxImage" src="" alt="Expanded gallery image" />
+        <p id="lightboxCaption"></p>
+      </div>
+    </div>
+
+
+    <div class="lightbox" id="contactPopup" aria-hidden="true">
+      <div class="lightbox-inner contact-popup">
+        <button class="title-btn lightbox-close" id="contactPopupClose" type="button" aria-label="Close message form">X</button>
+        <h3>Send Message</h3>
+        <form class="contact-popup-form" action="https://formsubmit.co/anuragyadav47844@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_subject" value="Portfolio Message" />
+          <input type="hidden" name="_template" value="table" />
+          <label>Name</label>
+          <input type="text" name="name" required placeholder="Your name" />
+          <label>Email</label>
+          <input type="email" name="email" required placeholder="your@email.com" />
+          <label>Message</label>
+          <textarea name="message" rows="5" required placeholder="Write your message..."></textarea>
+          <button class="flat-btn" type="submit">Send to Anurag</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
