@@ -439,18 +439,6 @@ body::before {
     line-height: 1.2;
 }
 
-.pronunciation-speaker {
-    color: #3b82f6;
-    font-size: 1.2rem;
-    line-height: 1;
-    cursor: pointer;
-    transition: color 0.2s;
-}
-
-.pronunciation-speaker:hover {
-    color: #2563eb;
-}
-
 .verified-badge {
     color: #3b82f6;
     font-size: 1.2rem;

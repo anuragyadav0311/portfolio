@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AY OS — Anurag Yadav Desktop Portfolio</title>
+  <meta name="description"
+    content="Windows 11-inspired interactive desktop portfolio by Anurag Yadav. Explore projects, skills, and more in an OS experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ===== LOCK SCREEN ===== -->
+  <div class="lock-screen" id="lockScreen">
+    <div class="lock-bg"></div>
+    <div class="lock-content">
+      <div class="lock-time" id="lockTime">00:00</div>
+      <div class="lock-date" id="lockDate">Saturday, March 28</div>
+      <div class="lock-avatar-wrap">
+        <img src="../minimal/profile.jpg" alt="Anurag Yadav" class="lock-avatar">
+      </div>
+      <div class="lock-name">Anurag Yadav</div>
+      <div class="lock-hint">
+        <i class="ri-arrow-up-line lock-hint-arrow"></i>
+        Click anywhere to unlock
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BOOT SCREEN ===== -->
+  <div class="boot-screen" id="bootScreen">
+    <div class="boot-logo">
+      <svg viewBox="0 0 120 60" width="80" height="40" class="boot-ay">
+        <rect x="4" y="50" width="10" height="10" fill="currentColor" />
+        <rect x="4" y="40" width="10" height="10" fill="currentColor" />
+        <rect x="4" y="30" width="10" height="10" fill="currentColor" />
+        <rect x="4" y="20" width="10" height="10" fill="currentColor" />
+        <rect x="14" y="10" width="10" height="10" fill="currentColor" />
+        <rect x="24" y="0" width="10" height="10" fill="currentColor" />
+        <rect x="34" y="10" width="10" height="10" fill="currentColor" />
+        <rect x="44" y="20" width="10" height="10" fill="currentColor" />
+        <rect x="44" y="30" width="10" height="10" fill="currentColor" />
+        <rect x="44" y="40" width="10" height="10" fill="currentColor" />
+        <rect x="44" y="50" width="10" height="10" fill="currentColor" />
+        <rect x="14" y="30" width="10" height="10" fill="currentColor" />
+        <rect x="24" y="30" width="10" height="10" fill="currentColor" />
+        <rect x="34" y="30" width="10" height="10" fill="currentColor" />
+        <rect x="60" y="0" width="10" height="10" fill="currentColor" />
+        <rect x="60" y="10" width="10" height="10" fill="currentColor" />
+        <rect x="70" y="20" width="10" height="10" fill="currentColor" />
+        <rect x="80" y="30" width="10" height="10" fill="currentColor" />
+        <rect x="80" y="40" width="10" height="10" fill="currentColor" />
+        <rect x="80" y="50" width="10" height="10" fill="currentColor" />
+        <rect x="90" y="20" width="10" height="10" fill="currentColor" />
+        <rect x="100" y="0" width="10" height="10" fill="currentColor" />
+        <rect x="100" y="10" width="10" height="10" fill="currentColor" />
+      </svg>
+    </div>
+    <div class="boot-spinner">
+      <div class="spinner-dot"></div>
+      <div class="spinner-dot"></div>
+      <div class="spinner-dot"></div>
+      <div class="spinner-dot"></div>
+      <div class="spinner-dot"></div>
+    </div>
+    <div class="boot-text">Loading AY OS...</div>
+  </div>
+
+  <!-- ===== DESKTOP ===== -->
+  <div class="desktop" id="desktop">
+
+    <!-- Desktop Wallpaper -->
+    <div class="desktop-wallpaper" id="desktopWallpaper"></div>
+
+    <!-- Desktop Icons -->
+    <div class="desktop-icons" id="desktopIcons">
+      <button class="desktop-icon" data-app="about" type="button">
+        <div class="icon-img"><i class="ri-user-3-fill"></i></div>
+        <span>About Me</span>
+      </button>
+      <button class="desktop-icon" data-app="projects" type="button">
+        <div class="icon-img"><i class="ri-rocket-2-fill"></i></div>
+        <span>Projects</span>
+      </button>
+      <button class="desktop-icon" data-app="skills" type="button">
+        <div class="icon-img"><i class="ri-code-s-slash-fill"></i></div>
+        <span>Skills</span>
+      </button>
+      <button class="desktop-icon" data-app="education" type="button">
+        <div class="icon-img"><i class="ri-graduation-cap-fill"></i></div>
+        <span>Education</span>
+      </button>
+      <button class="desktop-icon" data-app="terminal" type="button">
+        <div class="icon-img"><i class="ri-terminal-box-fill"></i></div>
+        <span>Terminal</span>
+      </button>
+      <button class="desktop-icon" data-app="contact" type="button">
+        <div class="icon-img"><i class="ri-contacts-book-fill"></i></div>
+        <span>Contact</span>
+      </button>
+      <button class="desktop-icon" data-app="gallery" type="button">
+        <div class="icon-img"><i class="ri-image-fill"></i></div>
+        <span>Gallery</span>
+      </button>
+      <button class="desktop-icon" data-app="settings" type="button">
+        <div class="icon-img"><i class="ri-settings-3-fill"></i></div>
+        <span>Settings</span>
+      </button>
+      <button class="desktop-icon" data-app="snake" type="button">
+        <div class="icon-img"><i class="ri-gamepad-fill"></i></div>
+        <span>Snake</span>
+      </button>
+      <button class="desktop-icon" data-app="tetris" type="button">
+        <div class="icon-img"><i class="ri-puzzle-fill"></i></div>
+        <span>Tetris</span>
+      </button>
+    </div>
+
+    <!-- ===== WINDOW LAYER ===== -->
+    <div class="window-layer" id="windowLayer">
+
+      <!-- ABOUT WINDOW -->
+      <div class="win11-window" id="win-about" data-app="about">
+        <div class="win-titlebar" data-drag>
+          <div class="win-titlebar-left">
+            <i class="ri-user-3-fill win-titlebar-icon"></i>
+            <span>About Me</span>
+          </div>
+          <div class="win-controls">
+            <button class="win-ctrl-btn minimize" data-action="minimize"><i class="ri-subtract-line"></i></button>
+            <button class="win-ctrl-btn maximize" data-action="maximize"><i class="ri-checkbox-blank-line"></i></button>
+            <button class="win-ctrl-btn close" data-action="close"><i class="ri-close-line"></i></button>
+          </div>
+        </div>
+        <div class="win-body">
+          <div class="about-layout">
+            <div class="about-header">
+              <img src="../minimal/profile.jpg" alt="Anurag Yadav" class="about-avatar">
+              <div class="about-info">
+                <h1>Anurag Yadav <span class="verified"><i class="ri-verified-badge-fill"></i></span></h1>
+                <p class="about-tagline">aspiring aiml dev</p>
+                <div class="about-meta">
+                  <span><i class="ri-map-pin-2-line"></i> Bhilai, India</span>
+                  <span><i class="ri-building-line"></i> B.Tech @ VIT Bhopal</span>
+                </div>
+              </div>
+            </div>
+            <div class="about-bio">
+              <p>Dedicated AI/ML Developer and Linux Enthusiast currently pursuing B.Tech at VIT Bhopal University.
+                Skilled in C++, Python, Java, and experienced with Linux systems.</p>
+              <p>Passionate about bridging the gap between high-level application development and low-level system
+                optimization. Actively preparing for GATE while exploring Data Science and Machine Learning.</p>
+            </div>
+            <a href="../minimal/resume.pdf" target="_blank" class="win-btn primary"><i class="ri-download-line"></i>
+              Download Resume</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECTS WINDOW -->
+      <div class="win11-window" id="win-projects" data-app="projects">
+        <div class="win-titlebar" data-drag>
+          <div class="win-titlebar-left">
+            <i class="ri-rocket-2-fill win-titlebar-icon"></i>
+            <span>Projects Explorer</span>
+          </div>
+          <div class="win-controls">
+            <button class="win-ctrl-btn minimize" data-action="minimize"><i class="ri-subtract-line"></i></button>
+            <button class="win-ctrl-btn maximize" data-action="maximize"><i class="ri-checkbox-blank-line"></i></button>
+            <button class="win-ctrl-btn close" data-action="close"><i class="ri-close-line"></i></button>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="win-section-title">Projects <span class="count">(6)</span></h2>
+          <div class="projects-grid">
+            <a href="https://github.com/anuragyadav0311/CatXForest" target="_blank" class="project-card">
+              <div class="proj-icon"><i class="ri-robot-2-line"></i></div>
+              <h3>CatXForest</h3>
+              <p>AI-powered career recommendation using Random Forest, XGBoost, CatBoost ensemble with Flask.</p>
+              <div class="proj-tags"><span>Python</span><span>Flask</span><span>ML</span></div>
+            </a>
+            <a href="https://github.com/anuragyadav0311/Vaxtrust" target="_blank" class="project-card">
+              <div class="proj-icon"><i class="ri-shield-check-line"></i></div>
+              <h3>VaxTrust</h3>
+              <p>AI-powered vaccine verification platform with QR scanning and real-time Trust Scores.</p>
+              <div class="proj-tags"><span>React</span><span>FastAPI</span><span>Firebase</span></div>
+            </a>
+            <a href="https://github.com/anuragyadav0311/Library-Management-System" target="_blank" class="project-card">
+              <div class="proj-icon"><i class="ri-book-open-line"></i></div>
+              <h3>Library Management</h3>
+              <p>Console-based C++ library system with file persistence and linked list data structures.</p>
+              <div class="proj-tags"><span>C++</span><span>OOP</span><span>File I/O</span></div>
+            </a>
+            <a href="https://github.com/anuragyadav0311/linux-dlsorter" target="_blank" class="project-card">
+              <div class="proj-icon"><i class="ri-folder-transfer-line"></i></div>
+              <h3>DLSorter</h3>
+              <p>Background script that auto-organizes Linux downloads using inotify file system events.</p>
+              <div class="proj-tags"><span>Bash</span><span>Linux</span><span>inotify</span></div>
+            </a>
+            <a href="https://github.com/anuragyadav0311/cpp-auto-installer" target="_blank" class="project-card">
+              <div class="proj-icon"><i class="ri-terminal-box-fill"></i></div>
+              <h3>C++ Auto Installer</h3>
+              <p>One-click cross-platform C/C++ compiler installer for Windows, Linux, and macOS.</p>
+              <div class="proj-tags"><span>Shell</span><span>Batch</span><span>C++</span></div>
+            </a>
+            <a href="https://github.com/anuragyadav0311/SmartStudyTracker" target="_blank" class="project-card">
+              <div class="proj-icon"><i class="ri-book-2-line"></i></div>
+              <h3>Smart Study Tracker</h3>
+              <p>Java CLI app for tracking daily study sessions with file-based persistence.</p>
+              <div class="proj-tags"><span>Java</span><span>OOP</span><span>File Handling</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS WINDOW -->
+      <div class="win11-window" id="win-skills" data-app="skills">
+        <div class="win-titlebar" data-drag>
+          <div class="win-titlebar-left">
+            <i class="ri-code-s-slash-fill win-titlebar-icon"></i>
+            <span>Skills.cfg</span>
+          </div>
+          <div class="win-controls">
+            <button class="win-ctrl-btn minimize" data-action="minimize"><i class="ri-subtract-line"></i></button>
+            <button class="win-ctrl-btn maximize" data-action="maximize"><i class="ri-checkbox-blank-line"></i></button>
+            <button class="win-ctrl-btn close" data-action="close"><i class="ri-close-line"></i></button>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="win-section-title">Technical Profile</h2>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h3><i class="ri-code-line"></i> Languages</h3>
+              <div class="skill-chips">
+                <span>C++</span><span>Python</span><span>Java</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQL</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3><i class="ri-brain-line"></i> AI / ML</h3>
+              <div class="skill-chips"><span>Machine Learning</span><span>Deep Learning</span><span>Computer
+                  Vision</span><span>NLP</span><span>Data Science</span><span>Scikit-learn</span></div>
+            </div>
+            <div class="skill-group">
+              <h3><i class="ri-terminal-box-line"></i> Tools & Systems</h3>
+              <div class="skill-chips"><span>Linux</span><span>Arch Linux</span><span>Ubuntu</span><span>Git &
+                  GitHub</span><span>Tkinter</span><span>VS Code</span></div>
+            </div>
+            <div class="skill-group">
+              <h3><i class="ri-lightbulb-line"></i> Concepts</h3>
+              <div class="skill-chips"><span>DSA</span><span>Algorithms</span><span>OOP</span><span>System
+                  Optimization</span><span>Competitive Programming</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDUCATION WINDOW -->
+      <div class="win11-window" id="win-education" data-app="education">
+        <div class="win-titlebar" data-drag>
+          <div class="win-titlebar-left">
+            <i class="ri-graduation-cap-fill win-titlebar-icon"></i>
+            <span>Education.log</span>
+          </div>
+          <div class="win-controls">
+            <button class="win-ctrl-btn minimize" data-action="minimize"><i class="ri-subtract-line"></i></button>
+            <button class="win-ctrl-btn maximize" data-action="maximize"><i class="ri-checkbox-blank-line"></i></button>
+            <button class="win-ctrl-btn close" data-action="close"><i class="ri-close-line"></i></button>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="win-section-title">Academic Timeline</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-year">2024 – 2028</span>
+                <h3>B.Tech CSE, VIT Bhopal University</h3>
+                <p>AI/ML specialization, backend development, and GATE preparation</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-year">2010 – 2024</span>
+                <h3>Delhi Public School, Risali, Bhilai</h3>
+                <p>Science-focused school education and strong academic fundamentals</p>
+              </div>
+            </div>
+          </div>
+          <div class="edu-interests">
+            <h3>Current Interests</h3>
+            <p>Fourier Transform, Automata Theory, NFA, regular expressions, and deep algorithmic problem-solving.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TERMINAL WINDOW -->
+      <div class="win11-window" id="win-terminal" data-app="terminal">
+        <div class="win-titlebar terminal-bar" data-drag>
+          <div class="win-titlebar-left">
+            <i class="ri-terminal-box-fill win-titlebar-icon"></i>
+            <span>AY Terminal</span>
+          </div>
+          <div class="win-controls">
+            <button class="win-ctrl-btn minimize" data-action="minimize"><i class="ri-subtract-line"></i></button>
+            <button class="win-ctrl-btn maximize" data-action="maximize"><i class="ri-checkbox-blank-line"></i></button>
+            <button class="win-ctrl-btn close" data-action="close"><i class="ri-close-line"></i></button>
+          </div>
+        </div>
+        <div class="win-body terminal-body">
+          <div class="terminal-output" id="terminalOutput">
+            <div class="term-line">Welcome to AY Terminal v2.0</div>
+            <div class="term-line hint">Type <code>help</code> to list commands. Try: <code>ls</code>,
+              <code>whoami</code>, <code>projects</code>, <code>clear</code></div>
+          </div>
+          <form class="terminal-input" id="terminalForm" autocomplete="off">
+            <span class="prompt">anu@ay-os:~$</span>
+            <input type="text" id="terminalInput" placeholder="type command..." spellcheck="false">
+          </form>
+        </div>
+      </div>
+
+      <!-- CONTACT WINDOW -->
+      <div class="win11-window" id="win-contact" data-app="contact">
+        <div class="win-titlebar" data-drag>
+          <div class="win-titlebar-left">
+            <i class="ri-contacts-book-fill win-titlebar-icon"></i>
+            <span>Contact</span>
+          </div>
+          <div class="win-controls">
+            <button class="win-ctrl-btn minimize" data-action="minimize"><i class="ri-subtract-line"></i></button>
+            <button class="win-ctrl-btn maximize" data-action="maximize"><i class="ri-checkbox-blank-line"></i></button>
+            <button class="win-ctrl-btn close" data-action="close"><i class="ri-close-line"></i></button>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="win-section-title">Get in Touch</h2>
+          <div class="contact-links">
+            <a href="mailto:anuragyadav47844@gmail.com" class="contact-item"><i class="ri-mail-fill"></i>
+              <div><strong>Email</strong><span>anuragyadav47844@gmail.com</span></div>
+            </a>
+            <a href="tel:+918109610356" class="contact-item"><i class="ri-phone-fill"></i>
+              <div><strong>Phone</strong><span>+91 8109610356</span></div>
+            </a>
+            <a href="https://github.com/anuragyadav0311" target="_blank" class="contact-item"><i
+                class="ri-github-fill"></i>
+              <div><strong>GitHub</strong><span>anuragyadav0311</span></div>
+            </a>
+            <a href="https://www.linkedin.com/in/anurag-yadav-aa7127325/" target="_blank" class="contact-item"><i
+                class="ri-linkedin-fill"></i>
+              <div><strong>LinkedIn</strong><span>anuragyadav</span></div>
+            </a>
+            <a href="https://codolio.com/profile/anuragyadav0311" target="_blank" class="contact-item"><i
+                class="ri-bookmark-fill"></i>
+              <div><strong>Codolio</strong><span>anuragyadav0311</span></div>
+            </a>
+            <a href="https://leetcode.com/u/anurag_yadav_0311/" target="_blank" class="contact-item"><i
+                class="ri-code-box-fill"></i>
+              <div><strong>LeetCode</strong><span>anurag_yadav_0311</span></div>
+            </a>
+          </div>
+          <div class="contact-form-section">
+            <h3>Send a Message</h3>
+            <form class="contact-form" action="https://formsubmit.co/anuragyadav47844@gmail.com" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="Portfolio Message (AY OS)">
+              <input type="text" name="name" required placeholder="Your name">
+              <input type="email" name="email" required placeholder="your@email.com">
+              <textarea name="message" rows="4" required placeholder="Write your message..."></textarea>
+              <button type="submit" class="win-btn primary"><i class="ri-send-plane-fill"></i> Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALLERY WINDOW -->
+      <div class="win11-window" id="win-gallery" data-app="gallery">
+        <div class="win-titlebar" data-drag>
+          <div class="win-titlebar-left">
+            <i class="ri-image-fill win-titlebar-icon"></i>
+            <span>Gallery</span>
+          </div>
+          <div class="win-controls">
+            <button class="win-ctrl-btn minimize" data-action="minimize"><i class="ri-subtract-line"></i></button>
+            <button class="win-ctrl-btn maximize" data-action="maximize"><i class="ri-checkbox-blank-line"></i></button>
+            <button class="win-ctrl-btn close" data-action="close"><i class="ri-close-line"></i></button>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="win-section-title">Photos</h2>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+      </div>
+
+      <!-- SETTINGS WINDOW -->
+      <div class="win11-window" id="win-settings" data-app="settings">
+        <div class="win-titlebar" data-drag>
+          <div class="win-titlebar-left">
+            <i class="ri-settings-3-fill win-titlebar-icon"></i>
+            <span>Settings</span>
+          </div>
+          <div class="win-controls">
+            <button class="win-ctrl-btn minimize" data-action="minimize"><i class="ri-subtract-line"></i></button>
+            <button class="win-ctrl-btn maximize" data-action="maximize"><i class="ri-checkbox-blank-line"></i></button>
+            <button class="win-ctrl-btn close" data-action="close"><i class="ri-close-line"></i></button>
+          </div>
+        </div>
+        <div class="win-body">
+          <h2 class="win-section-title"><i class="ri-palette-line"></i> Personalization</h2>
+          <p class="settings-label">Choose a wallpaper</p>
+          <div class="wallpaper-grid" id="wallpaperGrid">
+            <button class="wallpaper-option active" data-wall="bloom" title="Bloom">
+              <div class="wall-preview bloom"></div><span>Bloom</span>
+            </button>
+            <button class="wallpaper-option" data-wall="sunset" title="Sunset">
+              <div class="wall-preview sunset"></div><span>Sunset</span>
+            </button>
+            <button class="wallpaper-option" data-wall="matrix" title="Matrix">
+              <div class="wall-preview matrix"></div><span>Matrix</span>
+            </button>
+            <button class="wallpaper-option" data-wall="galaxy" title="Galaxy">
+              <div class="wall-preview galaxy"></div><span>Galaxy</span>
+            </button>
+            <button class="wallpaper-option" data-wall="ocean" title="Ocean">
+              <div class="wall-preview ocean"></div><span>Ocean</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SNAKE WINDOW -->
+      <div class="win11-window" id="win-snake" data-app="snake">
+        <div class="win-titlebar" data-drag>
+          <div class="win-titlebar-left">
+            <i class="ri-gamepad-fill win-titlebar-icon"></i>
+            <span>Snake.exe</span>
+          </div>
+          <div class="win-controls">
+            <button class="win-ctrl-btn minimize" data-action="minimize"><i class="ri-subtract-line"></i></button>
+            <button class="win-ctrl-btn maximize" data-action="maximize"><i class="ri-checkbox-blank-line"></i></button>
+            <button class="win-ctrl-btn close" data-action="close"><i class="ri-close-line"></i></button>
+          </div>
+        </div>
+        <div class="win-body game-body">
+          <p class="game-hint">Arrow keys / WASD to move. Eat food, avoid walls.</p>
+          <canvas id="snakeCanvas" width="280" height="280"></canvas>
+          <div class="game-controls">
+            <span id="snakeScore">Score: 0</span>
+            <button class="win-btn" id="snakeStart">Start</button>
+            <button class="win-btn" id="snakeReset">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TETRIS WINDOW -->
+      <div class="win11-window" id="win-tetris" data-app="tetris">
+        <div class="win-titlebar" data-drag>
+          <div class="win-titlebar-left">
+            <i class="ri-puzzle-fill win-titlebar-icon"></i>
+            <span>Tetris.exe</span>
+          </div>
+          <div class="win-controls">
+            <button class="win-ctrl-btn minimize" data-action="minimize"><i class="ri-subtract-line"></i></button>
+            <button class="win-ctrl-btn maximize" data-action="maximize"><i class="ri-checkbox-blank-line"></i></button>
+            <button class="win-ctrl-btn close" data-action="close"><i class="ri-close-line"></i></button>
+          </div>
+        </div>
+        <div class="win-body game-body">
+          <p class="game-hint">← → move, ↑ rotate, ↓ soft drop, Space hard drop.</p>
+          <canvas id="tetrisCanvas" width="200" height="400"></canvas>
+          <div class="game-controls">
+            <span id="tetrisScore">Score: 0</span>
+            <button class="win-btn" id="tetrisStart">Start</button>
+            <button class="win-btn" id="tetrisPause">Pause</button>
+            <button class="win-btn" id="tetrisReset">Reset</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== CONTEXT MENU ===== -->
+    <div class="context-menu" id="contextMenu">
+      <button data-ctx="refresh"><i class="ri-refresh-line"></i> Refresh</button>
+      <button data-ctx="terminal"><i class="ri-terminal-box-line"></i> Open Terminal</button>
+      <div class="ctx-divider"></div>
+      <button data-ctx="settings"><i class="ri-palette-line"></i> Personalize</button>
+      <button data-ctx="about"><i class="ri-information-line"></i> About this PC</button>
+    </div>
+
+    <!-- ===== START MENU ===== -->
+    <div class="start-menu" id="startMenu">
+      <div class="start-search">
+        <i class="ri-search-line"></i>
+        <input type="text" id="startSearch" placeholder="Search apps..." autocomplete="off">
+      </div>
+      <div class="start-section">
+        <div class="start-section-header">
+          <span>Pinned</span>
+        </div>
+        <div class="start-apps" id="startApps">
+          <button class="start-app-btn" data-app="about"><i class="ri-user-3-fill"></i><span>About Me</span></button>
+          <button class="start-app-btn" data-app="projects"><i
+              class="ri-rocket-2-fill"></i><span>Projects</span></button>
+          <button class="start-app-btn" data-app="skills"><i
+              class="ri-code-s-slash-fill"></i><span>Skills</span></button>
+          <button class="start-app-btn" data-app="education"><i
+              class="ri-graduation-cap-fill"></i><span>Education</span></button>
+          <button class="start-app-btn" data-app="terminal"><i
+              class="ri-terminal-box-fill"></i><span>Terminal</span></button>
+          <button class="start-app-btn" data-app="contact"><i
+              class="ri-contacts-book-fill"></i><span>Contact</span></button>
+          <button class="start-app-btn" data-app="gallery"><i class="ri-image-fill"></i><span>Gallery</span></button>
+          <button class="start-app-btn" data-app="settings"><i
+              class="ri-settings-3-fill"></i><span>Settings</span></button>
+          <button class="start-app-btn" data-app="snake"><i class="ri-gamepad-fill"></i><span>Snake</span></button>
+          <button class="start-app-btn" data-app="tetris"><i class="ri-puzzle-fill"></i><span>Tetris</span></button>
+        </div>
+      </div>
+      <div class="start-section">
+        <div class="start-section-header">
+          <span>Recommended</span>
+        </div>
+        <div class="start-recommended">
+          <a href="https://github.com/anuragyadav0311/CatXForest" target="_blank" class="start-rec-item">
+            <i class="ri-robot-2-line"></i>
+            <div><strong>CatXForest</strong><span>Recent project</span></div>
+          </a>
+          <a href="https://github.com/anuragyadav0311/Vaxtrust" target="_blank" class="start-rec-item">
+            <i class="ri-shield-check-line"></i>
+            <div><strong>VaxTrust</strong><span>Recent project</span></div>
+          </a>
+          <a href="../minimal/resume.pdf" target="_blank" class="start-rec-item">
+            <i class="ri-file-text-line"></i>
+            <div><strong>Resume.pdf</strong><span>Download</span></div>
+          </a>
+        </div>
+      </div>
+      <div class="start-footer">
+        <div class="start-user">
+          <img src="../minimal/profile.jpg" alt="AY" class="start-user-avatar">
+          <span>Anurag Yadav</span>
+        </div>
+        <button class="start-power" id="startPower" title="Lock"><i class="ri-shut-down-line"></i></button>
+      </div>
+    </div>
+
+    <!-- ===== TASKBAR ===== -->
+    <footer class="taskbar" id="taskbar">
+      <div class="taskbar-center">
+        <button class="taskbar-btn start-toggle" id="startBtn" title="Start">
+          <svg viewBox="0 0 120 60" width="20" height="10">
+            <rect x="4" y="50" width="10" height="10" fill="currentColor" />
+            <rect x="4" y="40" width="10" height="10" fill="currentColor" />
+            <rect x="4" y="30" width="10" height="10" fill="currentColor" />
+            <rect x="4" y="20" width="10" height="10" fill="currentColor" />
+            <rect x="14" y="10" width="10" height="10" fill="currentColor" />
+            <rect x="24" y="0" width="10" height="10" fill="currentColor" />
+            <rect x="34" y="10" width="10" height="10" fill="currentColor" />
+            <rect x="44" y="20" width="10" height="10" fill="currentColor" />
+            <rect x="44" y="30" width="10" height="10" fill="currentColor" />
+            <rect x="44" y="40" width="10" height="10" fill="currentColor" />
+            <rect x="44" y="50" width="10" height="10" fill="currentColor" />
+            <rect x="14" y="30" width="10" height="10" fill="currentColor" />
+            <rect x="24" y="30" width="10" height="10" fill="currentColor" />
+            <rect x="34" y="30" width="10" height="10" fill="currentColor" />
+            <rect x="60" y="0" width="10" height="10" fill="currentColor" />
+            <rect x="60" y="10" width="10" height="10" fill="currentColor" />
+            <rect x="70" y="20" width="10" height="10" fill="currentColor" />
+            <rect x="80" y="30" width="10" height="10" fill="currentColor" />
+            <rect x="80" y="40" width="10" height="10" fill="currentColor" />
+            <rect x="80" y="50" width="10" height="10" fill="currentColor" />
+            <rect x="90" y="20" width="10" height="10" fill="currentColor" />
+            <rect x="100" y="0" width="10" height="10" fill="currentColor" />
+            <rect x="100" y="10" width="10" height="10" fill="currentColor" />
+          </svg>
+        </button>
+        <div class="taskbar-divider"></div>
+        <div class="taskbar-apps" id="taskbarApps"></div>
+      </div>
+      <div class="taskbar-tray">
+        <button class="tray-btn" title="Notifications"><i class="ri-notification-3-line"></i></button>
+        <div class="tray-clock">
+          <span id="trayClock">00:00</span>
+          <span id="trayDate">1/1/2026</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose"><i class="ri-close-line"></i></button>
+    <img id="lightboxImg" src="" alt="Gallery preview">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

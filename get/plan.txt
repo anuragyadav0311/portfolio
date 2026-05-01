@@ -1,0 +1,86 @@
+Windows 11-Inspired Portfolio Rebuild
+Goal
+Completely rebuild the Portfolio-windows/ portfolio from its current retro DOS/Win95 style into a modern Windows 11-inspired desktop experience, taking design cues from kassq.dev, vovacodes.ca, and portfoli-os.vercel.app.
+
+Key Design Decisions
+Visual Direction: Windows 11 (Modern, not Retro)
+Acrylic/Mica translucent window backgrounds (frosted glass effect)
+Rounded corners everywhere (8–12px border-radius)
+Centered taskbar with hover scale effects (like Win11 dock)
+Segoe UI-inspired font (using Inter as web alternative)
+Dark theme by default with a subtle gradient desktop wallpaper (Win11 "Bloom" inspired)
+Smooth animations — window open/close scale transitions, taskbar icon bounces
+Interactive Features
+Boot Sequence — Modernized: Windows 11-style loading spinner + "AY" branding (not DOS text)
+Desktop Icons — Left-aligned grid with emoji/icon + label, double-click to open
+Draggable + Resizable Windows — With snap preview indicators, maximize/minimize/close (traffic-light style or Win11 icons)
+Centered Taskbar — Frosted glass, pinned app icons with tooltip labels, active app indicator dot, system tray (clock, wifi icon, battery)
+Start Menu — Win11-style floating panel: search bar at top, pinned apps grid, recommended section (recent projects), user profile at bottom
+Right-click Context Menu — Desktop right-click shows options like "Refresh", "Personalize", "About this PC"
+Lock Screen — On initial load before boot, shows time + date + "Click to unlock"
+Apps/Windows (Content from minimal portfolio)
+App	Window Title	Content
+About Me	about.exe	Name, bio, avatar, B.Tech @ VIT Bhopal, GATE prep, resume download
+Projects	projects.exe	6 project cards: CatXForest, VaxTrust, Library Management, DLSorter, C++ Auto Installer, Smart Study Tracker
+Skills	skills.cfg	Languages, AI/ML, Tools & Systems, Concepts
+Terminal	ay-terminal	Interactive terminal with commands (help, ls, whoami, etc.)
+Contact	contact.exe	Email, LinkedIn, GitHub, Codolio, LeetCode, phone, contact form
+Education	education.log	Academic timeline
+Gallery	photos.app	Photo gallery from existing photos folder
+Settings	settings.exe	Wallpaper picker (keep existing wallpaper themes)
+Snake	snake.exe	Keep existing snake game
+Tetris	tetris.exe	Keep existing tetris game
+Proposed Changes
+Portfolio-windows Component
+[MODIFY] 
+index.html
+Complete HTML rewrite with Win11 structure:
+Lock screen overlay
+Modernized boot screen (spinner, not DOS text)
+Desktop with icon grid
+Window layer with all app windows
+Start menu panel
+Context menu
+Centered taskbar with system tray
+[MODIFY] 
+styles.css
+Complete CSS rewrite:
+CSS variables for Win11 design tokens (acrylic blur, rounded corners, shadows)
+Frosted glass (backdrop-filter: blur) for taskbar, start menu, windows
+Smooth window animations (scale + fade)
+Centered taskbar with dock-style hover effects
+Win11-style window controls (minimize, maximize, close)
+Desktop icon grid styling
+Right-click context menu
+Lock screen with clock
+Responsive fallbacks
+[MODIFY] 
+script.js
+Complete JS rewrite:
+Lock screen click-to-unlock
+Boot sequence (modern spinner, timed transition)
+Window management (open, close, minimize, maximize, focus, drag, snap)
+Start menu toggle with search filtering
+Taskbar icon interactions
+Context menu (right-click handling)
+Clock/date updates
+Terminal commands (preserve existing)
+Snake & Tetris games (preserve existing logic)
+Gallery lightbox (preserve existing)
+Wallpaper switching (preserve existing)
+Verification Plan
+Browser Testing
+Open 
+Portfolio-windows/index.html
+ in browser
+Verify lock screen appears with time/date, click to unlock
+Verify boot animation plays and transitions to desktop
+Test double-clicking desktop icons to open windows
+Test dragging windows by title bar
+Test minimize/maximize/close buttons
+Test taskbar interactions (click to toggle windows)
+Test Start menu open/close and search
+Test right-click context menu on desktop
+Verify all app content is accurate (pulled from minimal portfolio)
+Test Snake and Tetris games
+Test wallpaper switching

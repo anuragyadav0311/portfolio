@@ -191,20 +191,3 @@ document.addEventListener('DOMContentLoaded', () => {
     const firstTimeline = document.querySelector('.timeline-item');
     if (firstTimeline) firstTimeline.classList.add('open');
 });
-
-// ===== PRONUNCIATION AUDIO =====
-const speaker = document.getElementById('pronunciation-speaker');
-const audio = document.getElementById('pronunciation-audio');
-
-if (speaker && audio) {
-    speaker.addEventListener('click', () => {
-        if (audio.paused) {
-            audio.play();
-        } else {
-            audio.currentTime = 0;
-            audio.play();
-        }
-    });
-}
-
-
