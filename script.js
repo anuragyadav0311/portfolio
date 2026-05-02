@@ -7,6 +7,11 @@
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.getElementById('themeIcon');
 const html = document.documentElement;
+const scrollProgress = document.getElementById('scrollProgress');
+const navSectionIndicator = document.getElementById('navSectionIndicator');
+const heroFocus = document.getElementById('heroFocus');
+const heroCard = document.querySelector('.hero-card');
+const heroPixelLogo = document.querySelector('.hero-pixel-logo');
 
 function setTheme(theme) {
     html.setAttribute('data-theme', theme);
@@ -38,6 +43,22 @@ function updateTime() {
 }
 updateTime();
 setInterval(updateTime, 10000);
+
+// ===== ROTATING HERO STATUS =====
+const focusMessages = [
+    'Building ML systems',
+    'Preparing for GATE',
+    'Exploring Linux deeply',
+    'Solving DSA problems'
+];
+
+if (heroFocus) {
+    let focusIndex = 0;
+    setInterval(() => {
+        focusIndex = (focusIndex + 1) % focusMessages.length;
+        heroFocus.textContent = focusMessages[focusIndex];
+    }, 2800);
+}
 
 // ===== COMMAND PALETTE =====
 const cmdPalette = document.getElementById('cmdPalette');
@@ -131,16 +152,69 @@ if (showMoreBtn) {
 // ===== SCROLL TO TOP BUTTON =====
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 
+function updateScrollProgress() {
+    if (!scrollProgress) return;
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+    scrollProgress.style.transform = `scaleX(${Math.min(Math.max(progress, 0), 1)})`;
+}
+
 window.addEventListener('scroll', () => {
     if (scrollTopBtn) {
         scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
     }
+    updateScrollProgress();
 });
 
 if (scrollTopBtn) {
     scrollTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+}
+
+// ===== ACTIVE SECTION INDICATOR =====
+function initActiveSectionIndicator() {
+    const sections = [...document.querySelectorAll('main section[id]')];
+    if (!sections.length || !navSectionIndicator) return;
+
+    const updateIndicator = () => {
+        let current = sections[0];
+        sections.forEach(section => {
+            if (window.scrollY >= section.offsetTop - 140) {
+                current = section;
+            }
+        });
+
+        navSectionIndicator.textContent =
+            current.id.charAt(0).toUpperCase() + current.id.slice(1);
+    };
+
+    updateIndicator();
+    window.addEventListener('scroll', updateIndicator, { passive: true });
+}
+
+// ===== HERO MOTION =====
+function initHeroMotion() {
+    if (!heroCard || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const reset = () => {
+        heroCard.style.transform = '';
+        if (heroPixelLogo) heroPixelLogo.style.transform = '';
+    };
+
+    heroCard.addEventListener('mousemove', (e) => {
+        const rect = heroCard.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        heroCard.style.transform = `translateY(-2px) rotateX(${y * -4}deg) rotateY(${x * 6}deg)`;
+
+        if (heroPixelLogo) {
+            heroPixelLogo.style.transform = `translate(${x * 8}px, ${y * 8}px)`;
+        }
+    });
+
+    heroCard.addEventListener('mouseleave', reset);
 }
 
 // ===== FADE-IN ANIMATIONS ON SCROLL =====
@@ -186,6 +260,9 @@ function applyStaggeredDelays() {
 document.addEventListener('DOMContentLoaded', () => {
     initFadeIn();
     applyStaggeredDelays();
+    initActiveSectionIndicator();
+    initHeroMotion();
+    updateScrollProgress();
 
     // Open first timeline item by default
     const firstTimeline = document.querySelector('.timeline-item');
@@ -206,5 +283,3 @@ if (speaker && audio) {
         }
     });
 }
-
-

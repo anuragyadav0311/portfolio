@@ -17,12 +17,15 @@
 
 <body>
 
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">AY</a>
             <div class="nav-right">
                 <span class="nav-portfolio-text">Portfolio</span>
+                <span class="nav-section-indicator" id="navSectionIndicator">Home</span>
                 <button class="cmd-palette-btn" id="cmdPaletteBtn" title="Search (Ctrl+K)">
                     <i class="ri-search-line"></i>
                     <span class="cmd-shortcut">Ctrl</span>
@@ -121,9 +124,15 @@
                         <div class="hero-identity">
                             <span class="hero-class-hint">text-3xl text-zinc-950 font-medium</span>
                             <h1 class="hero-name">Anurag Yadav <span class="verified-badge"><i
-                                        class="ri-verified-badge-fill"></i></span><span class="pronunciation-speaker" id="pronunciation-speaker"><i class="ri-volume-up-line"></i></span></h1>
-                            <audio id="pronunciation-audio" src="ElevenLabs_2026-05-01T15_45_50_Viraj - Intimidating and Suspenseful_pvc_sp98_s10_sb70_se0_b_m2.mp3"></audio>
+                                        class="ri-verified-badge-fill"></i></span><span class="pronunciation-speaker"
+                                    id="pronunciation-speaker"><i class="ri-volume-up-line"></i></span></h1>
+                            <audio id="pronunciation-audio"
+                                src="ElevenLabs_2026-05-01T15_45_50_Viraj - Intimidating and Suspenseful_pvc_sp98_s10_sb70_se0_b_m2.mp3"></audio>
                             <p class="hero-subtitle">aspiring aiml dev</p>
+                            <div class="hero-status-row">
+                                <span class="hero-availability"><span class="status-dot"></span>Open to projects</span>
+                                <span class="hero-focus" id="heroFocus">Building ML systems</span>
+                            </div>
                         </div>
                     </div>
                 </div>
