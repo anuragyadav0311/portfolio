@@ -56,7 +56,11 @@ if (heroFocus) {
     let focusIndex = 0;
     setInterval(() => {
         focusIndex = (focusIndex + 1) % focusMessages.length;
-        heroFocus.textContent = focusMessages[focusIndex];
+        heroFocus.classList.add('is-changing');
+        window.setTimeout(() => {
+            heroFocus.textContent = focusMessages[focusIndex];
+            heroFocus.classList.remove('is-changing');
+        }, 180);
     }, 2800);
 }
 
@@ -187,6 +191,7 @@ function initActiveSectionIndicator() {
 
         navSectionIndicator.textContent =
             current.id.charAt(0).toUpperCase() + current.id.slice(1);
+        navSectionIndicator.classList.add('active');
     };
 
     updateIndicator();
@@ -215,6 +220,25 @@ function initHeroMotion() {
     });
 
     heroCard.addEventListener('mouseleave', reset);
+}
+
+// ===== POINTER SPOTLIGHT =====
+function initPointerSpotlight() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const updateSpotlight = (x, y) => {
+        html.style.setProperty('--spotlight-x', `${x}px`);
+        html.style.setProperty('--spotlight-y', `${y}px`);
+    };
+
+    window.addEventListener('mousemove', (e) => {
+        updateSpotlight(e.clientX, e.clientY);
+    }, { passive: true });
+
+    window.addEventListener('touchstart', (e) => {
+        const point = e.touches[0];
+        if (point) updateSpotlight(point.clientX, point.clientY);
+    }, { passive: true });
 }
 
 // ===== FADE-IN ANIMATIONS ON SCROLL =====
@@ -262,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
     applyStaggeredDelays();
     initActiveSectionIndicator();
     initHeroMotion();
+    initPointerSpotlight();
     updateScrollProgress();
 
     // Open first timeline item by default
