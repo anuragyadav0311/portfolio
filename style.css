@@ -864,7 +864,7 @@ body::after {
 }
 
 .timeline-item.open .timeline-details {
-    max-height: 300px;
+    max-height: 520px;
     opacity: 1;
 }
 
@@ -874,6 +874,20 @@ body::after {
     font-family: var(--font-mono);
     line-height: 1.6;
     margin-top: 10px;
+}
+
+.timeline-list {
+    display: grid;
+    gap: 8px;
+    margin: 12px 0 0 18px;
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.timeline-list li::marker {
+    color: var(--text-muted);
 }
 
 /* Tags */
