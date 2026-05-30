@@ -1348,6 +1348,99 @@ body::after {
     transform: translateY(0);
 }
 
+/* ===== RESUME PREVIEW PAGE ===== */
+.resume-page {
+    min-height: 100vh;
+}
+
+.resume-shell {
+    position: relative;
+    z-index: 1;
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 84px 0 32px;
+}
+
+.resume-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.resume-kicker {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+}
+
+.resume-header h1 {
+    color: var(--text-primary);
+    font-size: clamp(1.7rem, 4vw, 2.7rem);
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+.resume-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resume-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 38px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1;
+    box-shadow: var(--shadow-sm);
+}
+
+.resume-action:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+    opacity: 1;
+}
+
+.resume-action-primary {
+    border-color: rgba(59, 130, 246, 0.45);
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.resume-action-primary:hover {
+    color: #ffffff;
+}
+
+.resume-viewer {
+    height: calc(100vh - 178px);
+    min-height: 560px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-card);
+    box-shadow: var(--shadow-lg);
+}
+
+.resume-viewer iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: var(--bg-card);
+}
+
 @keyframes pulseDot {
     0% {
         box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.45);
@@ -1492,6 +1585,27 @@ body::after {
     .contact-form-wrapper {
         padding: 20px;
     }
+
+    .resume-shell {
+        width: min(100% - 24px, 1120px);
+        padding-top: 72px;
+    }
+
+    .resume-header {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .resume-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .resume-viewer {
+        height: calc(100vh - 214px);
+        min-height: 460px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1518,5 +1632,10 @@ body::after {
 
     .overview-grid {
         padding: 14px 16px;
+    }
+
+    .resume-action {
+        padding-inline: 10px;
+        font-size: 0.84rem;
     }
 }

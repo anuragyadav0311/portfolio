@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Preview - Anurag Yadav</title>
+    <meta name="description" content="Preview the resume of Anurag Yadav.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body class="resume-page">
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">AY</a>
+            <div class="nav-right">
+                <span class="nav-portfolio-text">Resume</span>
+                <a href="index.html" class="nav-resume-link">Portfolio</a>
+                <a href="https://drive.google.com/file/d/1Ly6xPCC-LAlnCLudNqwaZnLWSmmRWYYe/view?usp=sharing"
+                    target="_blank" class="nav-icon-link" title="Open in Google Drive">
+                    <i class="ri-external-link-line"></i>
+                </a>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="ri-sun-line" id="themeIcon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="resume-shell">
+        <header class="resume-header">
+            <div>
+                <span class="resume-kicker">Resume Preview</span>
+                <h1>Anurag Yadav</h1>
+            </div>
+            <div class="resume-actions">
+                <a href="https://drive.google.com/file/d/1Ly6xPCC-LAlnCLudNqwaZnLWSmmRWYYe/view?usp=sharing"
+                    target="_blank" class="resume-action">
+                    <i class="ri-external-link-line"></i>
+                    <span>Open</span>
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=1Ly6xPCC-LAlnCLudNqwaZnLWSmmRWYYe"
+                    class="resume-action resume-action-primary">
+                    <i class="ri-download-2-line"></i>
+                    <span>Download</span>
+                </a>
+            </div>
+        </header>
+
+        <section class="resume-viewer" aria-label="Resume preview">
+            <iframe title="Anurag Yadav resume"
+                src="https://drive.google.com/file/d/1Ly6xPCC-LAlnCLudNqwaZnLWSmmRWYYe/preview"
+                allow="autoplay"></iframe>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
