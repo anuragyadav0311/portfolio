@@ -864,7 +864,7 @@ body::after {
 }
 
 .timeline-item.open .timeline-details {
-    max-height: 520px;
+    max-height: 640px;
     opacity: 1;
 }
 
